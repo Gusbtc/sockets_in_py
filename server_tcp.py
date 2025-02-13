@@ -11,10 +11,9 @@ def escutar(ip, port):
     server.listen(5)
     print(f"Escutando na porta {port}...")
 
-    # Receber o socket e o endereco e guardar
+    # Receber o socket e o endereco e guardar em variáveis diferentes
     connection, address = server.accept()
     print(f"Conexao recebida de {address[0]}, pela porta de saida {address[1]}")
-
     return connection
 
 def receber(server):
@@ -27,7 +26,6 @@ def receber(server):
                 break
         except Exception as erro:
             print(f"Erro ao receber dados: {erro}")
-            quit()
 
 
 def enviar(server):
@@ -41,7 +39,6 @@ def enviar(server):
 
 def main():
     server = escutar(ip, port)
-    
     thread_receber = threading.Thread(target=receber, args=(server,))
     thread_enviar = threading.Thread(target=enviar, args=(server,))
 
