@@ -31,6 +31,7 @@ def receber(client):
                 print("Servidor desconectado.")
                 break
             print(received)
+            # Adicionar comandos para respostas ou ações automatizadas
             if received == "/exit":
                 print("/exit recebido, encerrando conexão!")
                 client.close()
