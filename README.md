@@ -1,2 +1,2 @@
 # Sockets
-Um client e um server TCP que eu fiz para estudar sobre sockets em python
+Scripts capazes de abrir portas e se conectar em portas utilizando o protocolo TCP
